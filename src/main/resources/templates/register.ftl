@@ -15,7 +15,7 @@
 </head>
 
 <body class="text-center" style="background-color: #d9b08c" >
-    <form class="form-signin" method="post"style="background-color: #cc9666" >
+    <form class="form-signin" method="post"style="background-color: #cc9666;" >
         <img class="mb-4" src="https://tinder.com/static/tinder.png" style="border-radius: 50%;" alt=""  width="100" height="100">
         <h1 class="h3 mb-3 font-weight-normal">Please sign up</h1>
         <label for="inputName" class="sr-only">Full Name</label>

@@ -33,11 +33,13 @@ public class  TinderProject2 {
          // ------- filters  ----------- //
         handler.addFilter(new FilterHolder(new LoginFilter(templateEngine)), "/login/*", EnumSet.of(DispatcherType.REQUEST));
         handler.addFilter(SessionFilter.class, "/liked", EnumSet.of(DispatcherType.REQUEST));
+        handler.addFilter(SessionFilter.class, "/", EnumSet.of(DispatcherType.REQUEST));
         handler.addFilter(SessionFilter.class, "/messages/{id}", EnumSet.of(DispatcherType.REQUEST));
         handler.addFilter(SessionFilter.class, "/MainPage", EnumSet.of(DispatcherType.REQUEST));
         handler.addFilter(MessageFilter.class, "/messages/{id}", EnumSet.of(DispatcherType.REQUEST));
         server.setHandler(handler);
         server.start();
         server.join();
+        new LoginServlet(templateEngine);
     }
 }
