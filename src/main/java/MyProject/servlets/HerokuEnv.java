@@ -14,22 +14,21 @@ public class HerokuEnv {
 
 
     public static String jdbc_url(){
-      //  String url =System.getenv("JDBC_DATABASE_URL");
-        String url ="jdbc:postgresql://ec2-35-169-254-43.compute-1.amazonaws.com:5432/d7clhtro91tq7l";
+       String url =System.getenv("JDBC_DATABASE_URL");
+
         if (url==null) throw new IllegalArgumentException("JDBS_DATABASE_URL is empty");
         return url;
     }
 
     public static String jdbc_username(){
-     //   String username =System.getenv("JDBC_DATABASE_USERNAME");
-        String username ="mupvcapvhlgtse";
+       String username =System.getenv("JDBC_DATABASE_USERNAME");
+
         if (username==null) throw new IllegalArgumentException("JDBC_DATABASE_USERNAME is empty");
         return username;
     }
 
     public static String jdbc_password(){
-       // String password = System.getenv("JDBC_DATABASE_PASSWORD");
-        String password = "02d0f777b1f71a29ed0bb225224a30c050b51370e2096f82adf6efd6c2573b5e";
+        String password = System.getenv("JDBC_DATABASE_PASSWORD");
         if (password==null) throw new IllegalArgumentException("JDBS_DATABASE_PASSWORD is empty");
         return password;
     }
